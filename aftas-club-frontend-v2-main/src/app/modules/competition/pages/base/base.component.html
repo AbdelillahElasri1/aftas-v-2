@@ -1,0 +1,15 @@
+<div class="competitions__page h-screen bg-slate-900 overflow-y-hidden">
+  <div class="competitions__container h-full">
+    <div class="competitions__wrapper flex items-start h-full">
+      <div class="side__bar h-full">
+        <app-side-bar [competitions]="competitions()"></app-side-bar>
+      </div>
+      <div class="competition__main h-full w-full">
+        <div class="competitions__header w-full">
+          <app-competition-nav></app-competition-nav>
+        </div>
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</div>

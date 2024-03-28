@@ -1,0 +1,24 @@
+<table class="w-full text-left">
+  <thead>
+  <tr class="text-gray-400">
+    @for (column of columns; track $index) {
+    <th class="font-normal px-3 pt-0 pb-3 border-b border-gray-200 dark:border-gray-800">{{ column }}</th>
+    }
+  </tr>
+  </thead>
+  <tbody class="text-gray-600 dark:text-gray-100">
+    @for (row of data; track $index) {
+    <tr>
+      @for (column of columns; track $index) {
+      <ng-container>
+      <td class="sm:p-3 py-2 px-1 border-b border-gray-200 dark:border-gray-800">
+        <div class="flex items-center">
+          {{ row[column] }}
+        </div>
+      </td>
+      </ng-container>
+      }
+    </tr>
+    }
+  </tbody>
+</table>
